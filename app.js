@@ -4,6 +4,10 @@ searchBar.addEventListener('input', updateSearchValue)
 let submitButton = document.getElementById("submit")
 submitButton.addEventListener('click', retrieveGameData)
 
+let gameOptions = ["scythe", "nemesis", "wingspan", "carcassonne"]
+let randomiser = document.getElementById("randomiser")
+randomiser.addEventListener('click', getRandomGame)
+
 let gameImage = document.createElement('img')
 gameImage.setAttribute('id', 'gameImage')
 let body = document.getElementsByTagName("body")[0]
@@ -12,6 +16,14 @@ body.append(gameImage)
 function updateSearchValue(){
     searchValue = searchBar.value
     console.log(searchValue)
+}
+
+async function getRandomGame(){
+    let randomGame = Math.floor(Math.random()*(gameOptions.length))
+    console.log(gameOptions[randomGame])
+    let gameData = await fetch (`https://api.boardgameatlas.com/api/search?name=${gameOptions[randomGame]}&client_id=DwheEZXOaI`)
+    let gameDataResult = await gameData.json()
+    gameImage.setAttribute('src', gameDataResult.games[0].image_url)
 }
 
 async function retrieveGameData(){
