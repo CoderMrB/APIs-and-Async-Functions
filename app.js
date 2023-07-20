@@ -5,6 +5,7 @@ let submitButton = document.getElementById("submit")
 submitButton.addEventListener('click', retrieveGameData)
 
 let gameImage = document.createElement('img')
+gameImage.setAttribute('id', 'gameImage')
 let body = document.getElementsByTagName("body")[0]
 body.append(gameImage)
 
@@ -18,5 +19,4 @@ async function retrieveGameData(){
     let gameDataResult = await gameData.json()
     console.log(gameDataResult)
     gameImage.setAttribute('src', gameDataResult.games[0].image_url)
-    gameImage.setAttribute('width', '100vw')
 }
