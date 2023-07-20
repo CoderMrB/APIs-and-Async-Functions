@@ -11,6 +11,9 @@ body{
 #randomiserSection{
     align-self: center;
     text-align: center;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
 }
 
 label{
@@ -30,7 +33,7 @@ input{
 button{
     width:30vw;
     align-self: center;
-    margin-bottom: 1vh;
+    margin-bottom: 5vh;
 }
 
 h1{
