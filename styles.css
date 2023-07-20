@@ -43,7 +43,7 @@ h1{
 }
 
 
-#gameImage{
+#randomImage, #gameImage{
     height: 20vh;
     align-self: center;
 }
