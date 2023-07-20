@@ -19,6 +19,7 @@ function updateSearchValue(){
 }
 
 async function getRandomGame(){
+    gameImage.setAttribute('src', './rollingDie.gif')
     let randomGame = Math.floor(Math.random()*(gameOptions.length))
     console.log(gameOptions[randomGame])
     let gameData = await fetch (`https://api.boardgameatlas.com/api/search?name=${gameOptions[randomGame]}&client_id=DwheEZXOaI`)
