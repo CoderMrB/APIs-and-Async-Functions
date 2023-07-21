@@ -6,7 +6,7 @@
     <title>Leaderboard</title>
 </head>
 <body>
-    <table>
+    <table id="leaderboard">
         <tr>
             <th>
                 Position
@@ -17,21 +17,14 @@
             <th>
                 Current wins
             </th>
-        </tr>
-        <tr>
-            <td>
-               1 
-            </td>
-            <td>
-                Chris
-            </td>
-            <td>
-                1
-            </td>
-        </tr>
-        
+        </tr>        
     </table>
 <a href="./index.html">Go back 1 space</a>
 <a href="./randomiser.html">Randomiser</a>
+<script src="./leaderboard.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script> SUPABASE_URL = process.env.SUPABASE_URL
+    const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY
+    const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)</script>
 </body>
 </html>

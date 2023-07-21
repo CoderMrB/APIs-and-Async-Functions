@@ -9,9 +9,6 @@ gameImage.setAttribute('id', 'gameImage')
 
 let homebody = document.getElementById("home")
 
-
-
-
 function updateSearchValue(){
     searchValue = searchBar.value
     console.log(searchValue)

@@ -1,0 +1,35 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script data-main="./record.js" src="./require.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <label for="datePlayed">Date Played</label>
+        <input type="date" id="datePlayed">
+        <label for="gamePlayed">Choose the game</label>
+            <select id="gamePlayed" name="gamePlayed">
+                <option value="Carcasonne">Carcasonne</option>
+                <option value="Scythe">Scythe</option>
+                <option value="Nemesis">Nemesis</option>
+            </select>
+        <label for="winner">Who won?</label>
+            <select id="winner" name="winner">
+                <option value="Phil">Phil</option>
+                <option value="Mark">Mark</option>
+                <option value="Mike">Mike</option>
+                <option value="Chris">Chris</option>
+                <option value="Nat">Nat</option>
+            </select>
+        <button id="submit">Submit</button>  
+    <script src="./record.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script> SUPABASE_URL = process.env.SUPABASE_URL
+        const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY
+        const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)</script>
+    </body>
+    </html>
+
+   
