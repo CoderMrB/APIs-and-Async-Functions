@@ -27,8 +27,8 @@
     <script src="./record.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <script> 
-   const SUPABASE_URL = 'SUPABASE_URL';
-const SUPABASE_ANON_KEY = 'SUPABASE_ANON_KEY';
+ const SUPABASE_URL = '<%= process.env.SUPABASE_URL %>';
+        const SUPABASE_ANON_KEY = '<%= process.env.SUPABASE_ANON_KEY %>';
         const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)</script>
     </body>
     </html>
