@@ -1,4 +1,3 @@
-require('dotenv').config()
 console.log(process.env)
 
 let resultsTable = document.getElementById("leaderboard")
