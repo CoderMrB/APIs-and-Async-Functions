@@ -1,5 +1,5 @@
 const SUPABASE_URL = 'https://gllewomldkmnizscnkdw.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdsbGV3b21sZGttbml6c2Nua2R3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODk5MzkyNDYsImV4cCI6MjAwNTUxNTI0Nn0.9EJ3gR0wQoqLDMSfM3NI617lFhH7VosZ41xSChpy7BI';
+const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
 const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
 let formData ={date:"", game:"", winner:"" }
