@@ -2,11 +2,7 @@ const SUPABASE_URL = 'https://gllewomldkmnizscnkdw.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdsbGV3b21sZGttbml6c2Nua2R3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODk5MzkyNDYsImV4cCI6MjAwNTUxNTI0Nn0.9EJ3gR0wQoqLDMSfM3NI617lFhH7VosZ41xSChpy7BI';
 const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
-let ChrisScore = 0
-let MarkScore = 0
-let NatScore = 0
-let MikeScore = 0
-let PhilScore = 0
+let Scores =  {ChrisScore: 0, MarkScore: 0, NatScore: 0, MikeScore: 0, PhilScore: 0}
 
 async function fetchData() {
   let { data: History, error } = await _supabase
@@ -16,22 +12,22 @@ async function fetchData() {
   for(let i=0;i<History.length; i++){
     switch(History[i].WinnerName) {
       case 'Chris':
-        ChrisScore ++
+        Scores.ChrisScore ++
         break;
       case "Mark":
-        MarkScore ++
+        Scores.MarkScore ++
         break;
       case "Nat":
-        NatScore ++
+        Scores.NatScore ++
         break;
       case "Phil":
-        PhilScore ++
+        Scores.PhilScore ++
         break;
       case "Mike":
-        MikeScore ++
+        Scores.MikeScore ++
         break;
     }
-  }console.log(`Chris has won ${ChrisScore} times.\n Mark has won ${MarkScore} times.`)
+  }console.log(`Chris has won ${Scores.ChrisScore} times.\n Mark has won ${Scores.MarkScore} times.`)
 }
 
 // Call the async function
