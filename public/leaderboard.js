@@ -6,10 +6,10 @@ let Scores =  [{Name: "Chris", Score:0}, {Name:"Mark", Score: 0}, {Name:"Nat", S
 
 function compare( a, b ) {
   if ( a.Score< b.Score ){
-    return -1;
+    return 1;
   }
   if ( a.Score > b.Score ){
-    return 1;
+    return -1;
   }
   return 0;
 }
@@ -27,12 +27,27 @@ async function fetchData() {
         Scores[x].Score ++
       }
     }
-    }console.log(`Chris has won ${Scores.ChrisScore} times.\n Mark has won ${Scores.MarkScore} times.`)
-    console.log('The original scores array', Scores)
+    }  
     Scores.sort(compare)
     console.log('The sorted scores array', Scores)
 
-  }
+    for (let i =0; i<Scores.length; i++){
+       let tableRow = document.createElement("tr")
+       let position = document.createElement("td")
+       let name = document.createElement("td")
+       let wins = document.createElement("td")
+       position.textContent = i+1
+       name.textContent = Scores[i].Name
+       wins.textContent = Scores[i].Score
+       tableRow.appendChild(position)
+       tableRow.appendChild(name)
+       tableRow.appendChild(wins)
+      resultsTable.appendChild(tableRow)
+    }
+
+  
+    }
+
   
 
 
@@ -53,30 +68,9 @@ fetchData();
 //       addToTable(data)
 // }
 
-// function addToTable(data){
-//     for (let i =0; i<data.length; i++){
-//       resultsData.push(data[i]);
-//       let tableRow = document.createElement("tr")
-//        let nameData = document.createElement("td")
-//        nameData.textContent = resultsData[i]["WinnerName"]
-//        tableRow.appendChild(nameData)
-//       resultsTable.appendChild(tableRow)
-//     }
-//     }
+   
+    
 
 
 
-// let date = document.getElementById("datePlayed")
-// let game = document.getElementById("gamePlayed")
-// let winner = document.getElementById("winner")
 
-// let submit = document.getElementById("submit")
-// submit.addEventListener('click', postWinner)
-
-// async function postWinner(){
-//     formData.date = date.value
-//     formData.game = game.value
-//     formData.winner = winner.value
-//     console.log(formData)
-
- 
