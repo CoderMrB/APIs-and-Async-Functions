@@ -3,16 +3,10 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
 async function fetchData() {
-  try {
-    const { data, error } = await _supabase.rpc('Find_leader');
-    if (error) {
-      console.error('Error:', error);
-    } else {
-      console.log('Data:', data);
-    }
-  } catch (err) {
-    console.error('Error:', err);
-  }
+  let { data: History, error } = await _supabasesupabase
+  .from('History')
+  .select('WinnerID')
+  console.log(History)
 }
 
 // Call the async function
