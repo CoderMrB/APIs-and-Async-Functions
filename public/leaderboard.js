@@ -27,9 +27,6 @@ async function fetchData() {
     }console.log(`Chris has won ${Scores.ChrisScore} times.\n Mark has won ${Scores.MarkScore} times.`)
     console.log(Scores)
   }
-
-  
-  }
   
 
 
