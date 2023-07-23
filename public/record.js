@@ -20,7 +20,7 @@ async function postWinner(){
  const { data, error } = await _supabase
         .from('History')
           .insert([
-            { Date: formData.date, GamePlayed: formData.game, WinnerName: formData.winner }
+            { Date: formData.date}, {GamePlayed: formData.game}, {WinnerName: formData.winner ,
         ])
         .select()
     }
