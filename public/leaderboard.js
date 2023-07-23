@@ -4,14 +4,14 @@ const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
 let Scores =  [{Name: "Chris", Score:0}, {Name:"Mark", Score: 0}, {Name:"Nat", Score:0}, {Name: "Mike", Score: 0}, {Name: "Phil", Score: 0}]
 
-function compare( a, b ) {
-  if ( a.last_nom < b.last_nom ){
-    return -1;
-  }
-  if ( a.last_nom > b.last_nom ){
-    return 1;
-  }
-  return 0;
+// function compare( a, b ) {
+//   if ( a.last_nom < b.last_nom ){
+//     return -1;
+//   }
+//   if ( a.last_nom > b.last_nom ){
+//     return 1;
+//   }
+//   return 0;
 
 async function fetchData() {
   const { data: History, error } = await _supabase
