@@ -4,7 +4,7 @@ const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
 async function fetchWinnerCounts() {
   try {
-    const { data, error } = await supabase
+    const { data, error } = await _supabase
       .from('History')
       .select('WinnerName, COUNT(*) as count')
       .groupBy('WinnerName')
