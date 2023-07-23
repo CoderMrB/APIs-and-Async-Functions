@@ -2,7 +2,7 @@ const SUPABASE_URL = 'https://gllewomldkmnizscnkdw.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdsbGV3b21sZGttbml6c2Nua2R3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODk5MzkyNDYsImV4cCI6MjAwNTUxNTI0Nn0.9EJ3gR0wQoqLDMSfM3NI617lFhH7VosZ41xSChpy7BI';
 const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
-let Scores =  [{Name: Chris, Score:0}, {Name:Mark, Score: 0}, {Name:Nat, Score:0}, {Name: Mike, Score: 0}, {Name: Phil, Score: 0}]
+let Scores =  [{Name: "Chris", Score:0}, {Name:"Mark", Score: 0}, {Name:"Nat", Score:0}, {Name: "Mike", Score: 0}, {Name: "Phil", Score: 0}]
 
 function compare( a, b ) {
   if ( a.last_nom < b.last_nom ){
