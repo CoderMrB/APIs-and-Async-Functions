@@ -2,34 +2,7 @@ const SUPABASE_URL = 'https://gllewomldkmnizscnkdw.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdsbGV3b21sZGttbml6c2Nua2R3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODk5MzkyNDYsImV4cCI6MjAwNTUxNTI0Nn0.9EJ3gR0wQoqLDMSfM3NI617lFhH7VosZ41xSChpy7BI';
 const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
-async function fetchWinnerCounts() {
-  try {
-    const { data, error } = await _supabase
-      .from('History')
-      .select('WinnerName, COUNT(*) as count')
-      // .group('WinnerName')
-      // .order('count', { ascending: false });
-
-    if (error) {
-      console.error('Error fetching data:', error);
-      return [];
-    }
-
-    return data;
-  } catch (error) {
-    console.error('Error fetching data:', error.message);
-    return [];
-  }
-}
-
-// Usage example:
-fetchWinnerCounts().then((result) => {
-  console.log(result);
-}).catch((error) => {
-  console.error('Error:', error.message);
-});
-
-fetchWinnerCounts()
+const { data, error } = await supabase.rpc('Find_leader')
 // let resultsTable = document.getElementById("leaderboard")
 // let resultsData =[]
 
