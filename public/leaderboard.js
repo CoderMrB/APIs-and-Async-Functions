@@ -20,7 +20,7 @@ async function fetchData() {
   console.log(History)
   for(let i=0;i<History.length; i++){
     for(let x=0; x<Scores.length; x++){
-      if (History.WinnerName[i] === Scores[x].Name){
+      if (History[i].WinnerName === Scores[x].Name){
         Scores[x].Score ++
       }
     }
