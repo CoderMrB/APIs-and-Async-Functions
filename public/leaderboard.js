@@ -32,6 +32,7 @@ async function fetchData() {
     console.log('The sorted scores array', Scores)
 
     for (let i =0; i<Scores.length; i++){
+      let resultsTable = document.getElementById("leaderboard")
        let tableRow = document.createElement("tr")
        let position = document.createElement("td")
        let name = document.createElement("td")
@@ -53,7 +54,7 @@ async function fetchData() {
 
 // Call the async function
 fetchData();
-// let resultsTable = document.getElementById("leaderboard")
+// 
 // let resultsData =[]
 
 // document.addEventListener('DOMContentLoaded', async () => {
