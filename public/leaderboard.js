@@ -7,7 +7,7 @@ async function fetchWinnerCounts() {
     const { data, error } = await _supabase
       .from('History')
       .select('WinnerName, COUNT(*) as count')
-      .groupBy('WinnerName')
+      .group('WinnerName')
       .order('count', { ascending: false });
 
     if (error) {
