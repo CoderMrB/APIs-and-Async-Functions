@@ -2,7 +2,21 @@ const SUPABASE_URL = 'https://gllewomldkmnizscnkdw.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdsbGV3b21sZGttbml6c2Nua2R3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODk5MzkyNDYsImV4cCI6MjAwNTUxNTI0Nn0.9EJ3gR0wQoqLDMSfM3NI617lFhH7VosZ41xSChpy7BI';
 const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
-const { data, error } = await supabase.rpc('Find_leader')
+async function fetchData() {
+  try {
+    const { data, error } = await _supabase.rpc('Find_leader');
+    if (error) {
+      console.error('Error:', error);
+    } else {
+      console.log('Data:', data);
+    }
+  } catch (err) {
+    console.error('Error:', err);
+  }
+}
+
+// Call the async function
+fetchData();
 // let resultsTable = document.getElementById("leaderboard")
 // let resultsData =[]
 
