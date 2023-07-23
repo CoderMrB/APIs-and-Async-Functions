@@ -1,30 +1,60 @@
-console.log(process.env)
+const SUPABASE_URL = 'https://gllewomldkmnizscnkdw.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdsbGV3b21sZGttbml6c2Nua2R3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODk5MzkyNDYsImV4cCI6MjAwNTUxNTI0Nn0.9EJ3gR0wQoqLDMSfM3NI617lFhH7VosZ41xSChpy7BI';
+const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
-let resultsTable = document.getElementById("leaderboard")
-let resultsData =[]
-
-document.addEventListener('DOMContentLoaded', async () => {
-  await updateResults();
-});
-
-
-async function updateResults(){
-    const { data, error } = await _supabase   
+async function fetchWinnerCounts() {
+  try {
+    const { data, error } = await supabase
       .from('History')
-      .select('*')
-      addToTable(data)
+      .select('WinnerName, COUNT(*) as count')
+      .groupBy('WinnerName')
+      .order('count', { ascending: false });
+
+    if (error) {
+      console.error('Error fetching data:', error);
+      return [];
+    }
+
+    return data;
+  } catch (error) {
+    console.error('Error fetching data:', error.message);
+    return [];
+  }
 }
 
-function addToTable(data){
-    for (let i =0; i<data.length; i++){
-      resultsData.push(data[i]);
-      let tableRow = document.createElement("tr")
-       let nameData = document.createElement("td")
-       nameData.textContent = resultsData[i]["WinnerName"]
-       tableRow.appendChild(nameData)
-      resultsTable.appendChild(tableRow)
-    }
-    }
+// Usage example:
+fetchWinnerCounts().then((result) => {
+  console.log(result);
+}).catch((error) => {
+  console.error('Error:', error.message);
+});
+
+fetchWinnerCounts()
+// let resultsTable = document.getElementById("leaderboard")
+// let resultsData =[]
+
+// document.addEventListener('DOMContentLoaded', async () => {
+//   await updateResults();
+// });
+
+
+// async function updateResults(){
+//     const { data, error } = await _supabase   
+//       .from('History')
+//       .select('*')
+//       addToTable(data)
+// }
+
+// function addToTable(data){
+//     for (let i =0; i<data.length; i++){
+//       resultsData.push(data[i]);
+//       let tableRow = document.createElement("tr")
+//        let nameData = document.createElement("td")
+//        nameData.textContent = resultsData[i]["WinnerName"]
+//        tableRow.appendChild(nameData)
+//       resultsTable.appendChild(tableRow)
+//     }
+//     }
 
 
 
