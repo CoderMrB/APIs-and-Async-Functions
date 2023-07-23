@@ -10,12 +10,27 @@
     <title>Board game geeks webapp</title>
 </head>
 <body id="home">
+    <img id="diceLogo" src = "./Dice.png" alt="dice logo"/>
     <h1>Board Game Geeks</h1>
     <br><br>
-    <a href="./randomiser.html">Randomiser</a>
-    <a href="./leaderboard.html">Don't be a ranker</a>
-    <a href="./record.html">Record a game</a>
+    <a href="./randomiser.html">Pick a random game</a>
+    <a href="./record.html">Record a result</a>
     <a href="./lookUpGame.html">Search for a game</a>
+
+    <table id="leaderboard">
+        <tr>
+            <th>
+                Position
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Current wins
+            </th>
+        </tr>        
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <script src="./index.js" type="module"></script>
 </body>
 </html>
