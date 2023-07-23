@@ -5,7 +5,7 @@ const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 async function fetchData() {
   let { data: History, error } = await _supabase
   .from('History')
-  .select('WinnerID')
+  .select('WinnerName')
   console.log(History)
 }
 
