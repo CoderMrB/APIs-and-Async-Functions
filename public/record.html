@@ -16,6 +16,7 @@
         <h1>Board Game Geeks</h1>
         </div>
         <div id = "recordForm">
+          
             <div class="formDiv">
                 <label for="datePlayed">When did you play?</label>
                 <input type="date" id="datePlayed">
@@ -23,6 +24,7 @@
             <div class="formDiv">
         <label for="gamePlayed">Which game did you play?</label>
             <select id="gamePlayed" name="gamePlayed">
+                <option value="" disabled selected hidden>Choose a game</option>
                 <option value="Carcasonne">Carcasonne</option>
                 <option value="Scythe">Scythe</option>
                 <option value="Nemesis">Nemesis</option>
@@ -31,6 +33,7 @@
         <div class="formDiv">
         <label for="winner">Who won?</label>
             <select id="winner" name="winner">
+                <option value="" disabled selected hidden>Choose the winner</option>
                 <option value="Phil">Phil</option>
                 <option value="Mark">Mark</option>
                 <option value="Mike">Mike</option>
@@ -38,10 +41,12 @@
                 <option value="Nat">Nat</option>
             </select>
         </div>
+
         <button id="submit">Submit</button>
 </div>
+<a href="./index.html">Back to home</a>
 </div>
-        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <script src="./record.js"></script>
     </body>
     </html>

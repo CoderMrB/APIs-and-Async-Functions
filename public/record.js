@@ -4,6 +4,8 @@ const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
 let formData ={date:"", game:"", winner:"" }
 
+let inputs = document.getElementsByTagName("form")
+
 let date = document.getElementById("datePlayed")
 let game = document.getElementById("gamePlayed")
 let winner = document.getElementById("winner")
@@ -17,10 +19,18 @@ async function postWinner(){
     formData.winner = winner.value
     console.log(formData)
 
+
+  if (formData.date === "" || formData.game === "" || formData.winner  === ""){
+    alert("Please make sure you've seleced all the details!")
+  }else{
  const { data, error } = await _supabase
         .from('History')
           .insert([
             { Date: formData.date, GamePlayed: formData.game, WinnerName: formData.winner},
         ])
         .select()
+
+        alert("Result recorded!")
+     
     }
+}

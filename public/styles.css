@@ -67,13 +67,13 @@ label{
     text-align: center;
     margin-bottom: 1vh;
 }
-
+/* 
 input{
     width:30vw;
     align-self: center;
     margin-bottom: 1vh;
     text-align: center;
-}
+} */
 
 button{
     width:30vw;
@@ -162,6 +162,8 @@ a:hover{
     width: 90%;
     text-align: center;
     border-style: none;
+    font-size: large;
+
 }
 
 
@@ -176,3 +178,14 @@ button{
     font-weight: bolder;
     border-radius: 10%;
 }
+
+
+select:invalid{
+    color: gray;
+}
+option{
+    color: black;
+}
+
+
+
