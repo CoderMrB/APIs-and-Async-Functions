@@ -9,7 +9,6 @@ body{
     background-color: #fbfaf7;
     margin: auto;
     align-items: center;
-
 }
 
 #header{
@@ -132,12 +131,22 @@ a:hover{
         background-color: red;
       }
 
+#recordPage{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-around;
+    height:90vh;
+    align-items: center;
+}
+
 #recordForm{
     display: flex;
     flex-direction: column;
-    background-color: #f36b61;
-    height: 70vh;
+    height: 60vh;
     width: 60vw;
     font-size: larger;
     justify-content: space-between;
+    box-sizing: border-box;
+    margin-top: 0;
       }
