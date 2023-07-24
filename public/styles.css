@@ -94,6 +94,7 @@ nav{
     flex-direction: column;
     height: 22%;
     justify-content: space-between;
+    margin-bottom: 8vh;
 }
 
 /* a{
