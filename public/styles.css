@@ -1,12 +1,15 @@
 body{
-    font-family: 'Noto Sans Syriac Eastern', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     box-sizing: border-box;
     height: 100vh;
     width: 100%;
-    background-color: #fffcf3
+    background-color: #fbfaf7;
+    margin: auto;
+    align-items: center;
+
 }
 
 #header{
@@ -15,7 +18,7 @@ body{
     align-self: center;
     box-sizing: border-box;
     width: 90vw;
-    margin-top: 10%;
+    margin-left: 6%;
 }
   
 #meeplesLogo{
@@ -52,11 +55,19 @@ a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid black;
+    width: 90%;
+    padding-bottom: 2vh;
+    padding-top: -2vh;
+    border-radius: 3%;
+    background-color: #d3f4f4;
+    margin-top: -10vh;
 }
     
 #leaderboard{
             width: 80vw;
             text-align: center;
+
         }
 
 #randomiserSection{
@@ -91,4 +102,12 @@ button{
 #randomImage, #gameImage{
     height: 20vh;
     align-self: center;
+}
+
+nav{
+    margin-top: -10vh;
+    display: flex;
+    flex-direction: column;
+    height: 22%;
+    justify-content: space-between;
 }
