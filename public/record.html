@@ -7,6 +7,10 @@
         <title>Document</title>
     </head>
     <body>
+        <div id="header">
+        <img id="meeplesLogo" src = "./meeples.png" alt="dice logo"/>
+        <h1>Board Game Geeks</h1>
+        <div id = "recordForm">
         <label for="datePlayed">Date Played</label>
         <input type="date" id="datePlayed">
         <label for="gamePlayed">Choose the game</label>
@@ -24,6 +28,7 @@
                 <option value="Nat">Nat</option>
             </select>
         <button id="submit">Submit</button>
+    </div>
         <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <script src="./record.js"></script>
     </body>

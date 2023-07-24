@@ -131,3 +131,13 @@ a:hover{
       a:hover, a:active {
         background-color: red;
       }
+
+#recordForm{
+    display: flex;
+    flex-direction: column;
+    background-color: #f36b61;
+    height: 70vh;
+    width: 60vw;
+    font-size: larger;
+    justify-content: space-between;
+      }
