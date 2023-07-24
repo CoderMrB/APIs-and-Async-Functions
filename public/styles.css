@@ -1,5 +1,5 @@
 body{
-    font-family: 'Farro', sans-serif;
+    font-family: 'Noto Sans Syriac Eastern', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -8,43 +8,56 @@ body{
     width: 100%;
     background-color: #fffcf3
 }
+
+#header{
+    flex-direction: row;
+    display: flex;
+    align-self: center;
+    box-sizing: border-box;
+    width: 90vw;
+    margin-top: 10%;
+}
   
-#diceLogo{
-    width: 30vh;
+#meeplesLogo{
+    width: 11vh;
     align-self: center;
 }
 
-    h1{
-        align-self: center;
-        margin-top: 2vh;
-        padding: 1vh;
-        border-radius: 6%;
-        margin-bottom: -7vh;
+h1{
+    align-self: center;
+    text-align: center; 
+    margin:auto;
+    font-size: 184%;
     }
 
-    a{
+  
+
+a{
     text-decoration: none;
     color: #4A5043;
     box-sizing: border-box;
     align-self: center;
     font-size: 110%;
     padding: 1vh;
-    margin-bottom: 3vw;
+    margin-bottom: 1vw;
     }
 
-    a:hover{
-        text-decoration: none;
-        font-size: 4vh;
-        cursor: pointer;
-        }
-    
-    table{
-        background-color: aquamarine;
-        margin-top: 4vw;
-        align-self: center;
-        width: 80vw;
-        text-align: center;
+a:hover{
+    text-decoration: none;
+    font-size: 4vh;
+    cursor: pointer;
     }
+
+#leaderBoardDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    
+#leaderboard{
+            width: 80vw;
+            text-align: center;
+        }
 
 #randomiserSection{
     align-self: center;

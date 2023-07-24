@@ -6,30 +6,35 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Farro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Syriac+Eastern&display=swap" rel="stylesheet">
     <title>Board game geeks webapp</title>
 </head>
 <body id="home">
-    <img id="diceLogo" src = "./Dice.png" alt="dice logo"/>
+    <div id="header">
+    <img id="meeplesLogo" src = "./meeples.png" alt="dice logo"/>
     <h1>Board Game Geeks</h1>
-    <br><br>
+    </div>
+
+    <!--<div id="leaderBoardDiv">-->
+        <div id="leaderBoardDiv">
+            <table id="leaderboard">
+                 <tr>
+                    <th>
+                    Position
+                    </th>
+                    <th>
+                    Name
+                    </th>
+                    <th>
+                    Current wins
+                    </th>
+                </tr>  
+            </table>
+        </div>
+    <!--</div>-->
     <a href="./randomiser.html">Pick a random game</a>
     <a href="./record.html">Record a result</a>
     <a href="./lookUpGame.html">Search for a game</a>
-
-    <table id="leaderboard">
-        <tr>
-            <th>
-                Position
-            </th>
-            <th>
-                Name
-            </th>
-            <th>
-                Current wins
-            </th>
-        </tr>        
-    </table>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <script src="./index.js" type="module"></script>
 </body>
