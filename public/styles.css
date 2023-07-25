@@ -6,7 +6,7 @@ body{
     box-sizing: border-box;
     height: 100vh;
     width: 100%;
-    background-color: #fbfaf7;
+    background-color: #ffffff;
     margin: auto;
     align-items: center;
 }
@@ -19,6 +19,16 @@ body{
     width: 90vw;
     margin-left: 6%;
     margin-top: -6vh;
+}
+
+#randomiserHeader{
+    flex-direction: row;
+    display: flex;
+    align-self: center;
+    box-sizing: border-box;
+    width: 90vw;
+    margin-left: 6%;
+    margin-top: -28vh;
 }
   
 #meeplesLogo{
@@ -59,7 +69,17 @@ h1{
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
+    position: fixed;
+    margin-top: -25vh;
 }
+
+#randomImageSection{
+    margin-top:100px;
+    position: fixed;
+    align-self: center;
+    margin-top: 17vh;
+}
+
 
 label{
     width:30vw;
@@ -85,6 +105,7 @@ button{
 #randomImage, #gameImage{
     height: 20vh;
     align-self: center;
+    margin-top: 80px;
 }
 
 nav{
@@ -96,23 +117,6 @@ nav{
     margin-bottom: 8vh;
 }
 
-/* a{
-    text-decoration: none;
-    color: #4A5043;
-    box-sizing: border-box;
-    align-self: center;
-    font-size: 130%;
-    padding: 1vh;
-    margin-bottom: 1vw;
-    font-weight: 900;
-    border: 0.1px dotted black;
-    }
-
-a:hover{
-    text-decoration: none;
-    font-size: 4vh;
-    cursor: pointer;
-    } */
 
     a:link, a:visited {
         background-color: #f36b61;
@@ -200,5 +204,8 @@ option{
     background-color: #9bcbcb;
     width: 60%;
     align-self: center;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#randomiserHome{
+    margin-bottom: -20vh;
 }

@@ -2,7 +2,7 @@ let gameOptions = ["scythe", "nemesis", "wingspan", "carcassonne"]
 let randomiser = document.getElementById("randomiser")
 randomiser.addEventListener('click', getRandomGame)
 
-let randomiserDiv =document.getElementById("randomiserSection")
+let randomiserDiv =document.getElementById("randomImageSection")
 
 let randomImage = document.createElement('img')
 randomImage.setAttribute('id', 'randomImage')
