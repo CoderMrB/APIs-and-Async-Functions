@@ -15,14 +15,32 @@
         <h1>Board Game Geeks</h1>
     </div>
     <br><br>
-    <H3>Search for a new game</H3>
-    <label for="players">How many people are playing?</label>
-    <input id="players" type="text">
-    <label for="time">How long can you play for?</label>
-    <input id="time" type="text">
-    <button id="submit">Submit</button>
+    <div id="searchFields">
+    <h3>Search for a new game</h3>
+    <select id="players" name="players">
+        <option value="" disabled selected hidden>How many people are playing?</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+        <option value=6>6</option>
+        <option value=7>7</option>
+        <option value=8+>8</option>
+    </select>
+    <br>
+    <select id="players" name="players">
+        <option value="" disabled selected hidden>How much time can you spare?</option>
+        <option value=29>Half an hour</option>
+        <option value=60>An hour</option>
+        <option value=120>2 hours</option>
+        <option value=180>3 hours</option>
+        <option value=240>4 hours</option>
+        <option value=300>5 hours</option>
+        <option value=301>Over 5 hours</option>
+    </select>
     <p id="gameName"></p>
-    <img id="gameImage" alt="Image of chosen game">
+    <button id="submit">Submit</button>
+    </div>
     <a href="./index.html">Back to home</a>
     <script src="./lookUpGame.js" type="module"></script>
 </body>

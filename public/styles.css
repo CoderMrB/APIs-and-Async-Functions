@@ -38,6 +38,8 @@ body{
     box-sizing: border-box;
     width: 90vw;
     margin-left: 6%;
+    margin-top: 4.5vh;
+    box-sizing: border-box;
 }
   
 #meeplesLogo{
@@ -96,6 +98,7 @@ label{
     text-align: center;
     margin-bottom: 1vh;
 }
+
 /* 
 input{
     width:30vw;
@@ -218,4 +221,27 @@ option{
 
 #randomiserHome{
     margin-bottom: -20vh;
+}
+
+#searchFields{
+
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    text-align: center;
+    /* height: 10%; */
+    /* margin-top: -20vh; */
+    align-items: center;
+    justify-content: space-around;
+    flex: 1;
+}
+
+#searchFields label{
+    width: 90%;
+}
+
+#searchFields #submit{
+    margin-top: auto;
+    margin-bottom: auto;
+  
 }
