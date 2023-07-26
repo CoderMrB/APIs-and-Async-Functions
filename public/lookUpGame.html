@@ -9,15 +9,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
         <title>Board game geeks webapp</title>
     </head>
-    <body>
-    <div id="header">
+    <body id="home">
+    <div id="searchHeader">
         <img id="meeplesLogo" src = "./meeples.png" alt="dice logo"/>
         <h1>Board Game Geeks</h1>
     </div>
     <br><br>
-    <label for="search">Find a game</label>
-    <input id="search" type="text">
+    <H3>Search for a new game</H3>
+    <label for="players">How many people are playing?</label>
+    <input id="players" type="text">
+    <label for="time">How long can you play for?</label>
+    <input id="time" type="text">
     <button id="submit">Submit</button>
+    <p id="gameName"></p>
+    <img id="gameImage" alt="Image of chosen game">
     <a href="./index.html">Back to home</a>
     <script src="./lookUpGame.js" type="module"></script>
 </body>

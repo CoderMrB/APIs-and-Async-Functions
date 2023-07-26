@@ -30,6 +30,15 @@ body{
     margin-left: 6%;
     margin-top: -28vh;
 }
+
+#searchHeader{
+    flex-direction: row;
+    display: flex;
+    align-self: center;
+    box-sizing: border-box;
+    width: 90vw;
+    margin-left: 6%;
+}
   
 #meeplesLogo{
     width: 11vh;
@@ -104,6 +113,7 @@ button{
 
 #randomImage, #gameImage{
     height: 20vh;
+    /* height: 2vh; */
     align-self: center;
     margin-top: 80px;
 }
