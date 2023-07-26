@@ -241,7 +241,33 @@ option{
 }
 
 #searchFields #submit{
-    margin-top: auto;
-    margin-bottom: auto;
+    position: fixed;
+    margin-top: -3vh;
+  
+}
+
+#gameImage{
+    height: 20vh;
+    /* height: 2vh; */
+    align-self: center;
+    margin-top: 15vh;
+}
+
+#gameName{
+    height:10vh;
+    text-align: center;
+    position: fixed;
+    margin-top: 15vh;
+    width: 95%;
+}
+
+#selection{
+    /* position: fixed; */
+    margin-top:-10vh;
+    margin-bottom: 0;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   
 }
