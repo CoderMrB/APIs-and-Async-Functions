@@ -258,7 +258,9 @@ option{
     text-align: center;
     position: fixed;
     margin-top: 15vh;
-    width: 95%;
+    width: 96%;
+    margin-bottom: 5vh;
+
 }
 
 #selection{
@@ -269,5 +271,8 @@ option{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
+}
+
+#selection select:invalid{
+    color: grey;
 }
